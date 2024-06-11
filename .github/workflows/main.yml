@@ -25,10 +25,7 @@ jobs:
         with:
           username: ${{ secrets.USERNAME }}
           password: ${{ secrets.PASSWORD }}
-
-      - name: Log Docker Username
-        run: echo "Docker Username: ${{ secrets.USERNAME }}"
-
+          
       - name: Build and push Docker image
         uses: docker/build-push-action@v2
         with:
